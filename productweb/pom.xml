@@ -2,10 +2,16 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.sanket.product</groupId>
+
+	<parent>
+		<groupId>com.sanket.product</groupId>
+		<artifactId>productsparent</artifactId>
+		<version>1.0</version>
+	</parent>
+
 	<artifactId>productweb</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+
 	<name>productweb</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
@@ -28,6 +34,17 @@
 			<artifactId>geronimo-servlet_3.0_spec</artifactId>
 			<version>1.0</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sanket.product</groupId>
+			<artifactId>productservices</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>5.0.7.RELEASE</version>
 		</dependency>
 	</dependencies>
 	<build>
